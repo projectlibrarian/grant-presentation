@@ -62,7 +62,7 @@
     align-items: flex-start;
   }
   .slide-title .kicker {
-    font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+    font-size: clamp(0.9rem, 1.4vw, 1.3rem);
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #e94560;
@@ -153,6 +153,47 @@
   .slide-mistake .reversal ul { padding-left: 18px; }
   .slide-mistake .reversal ul li { margin-bottom: 4px; }
 
+  /* Intro slide */
+  .slide-intro {
+    background: #fff;
+    justify-content: center;
+  }
+  .intro-kicker {
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #e94560;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+  .intro-name {
+    font-size: clamp(2.4rem, 6vw, 5.5rem);
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .intro-accent {
+    width: 50px;
+    height: 4px;
+    background: #e94560;
+    border-radius: 2px;
+    margin-bottom: 20px;
+  }
+  .intro-role {
+    font-size: clamp(1.1rem, 2.2vw, 2rem);
+    color: #0f3460;
+    font-weight: 600;
+    margin-bottom: 24px;
+  }
+  .intro-body {
+    font-size: clamp(1rem, 1.9vw, 1.6rem);
+    color: #555;
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: 75%;
+  }
+
   /* Transition slide */
   .slide-transition {
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
@@ -188,7 +229,7 @@
   .pro-number {
     font-size: clamp(3rem, 10vw, 10rem);
     font-weight: 700;
-    color: #f0f0f5;
+    color: #d8d8e8;
     line-height: 1;
     margin-bottom: 4px;
     letter-spacing: -0.02em;
@@ -232,27 +273,27 @@
     justify-content: center;
   }
   .slide-close h2 {
-    font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+    font-size: clamp(1.8rem, 4.5vw, 4rem);
     font-weight: 700;
     margin-bottom: 18px;
     line-height: 1.2;
   }
   .slide-close p {
-    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    font-size: clamp(1.1rem, 2vw, 1.7rem);
     color: rgba(255,255,255,0.6);
     font-weight: 300;
-    max-width: 560px;
+    max-width: 600px;
     line-height: 1.7;
     margin-bottom: 32px;
   }
   .slide-close a {
     display: inline-block;
-    padding: 14px 32px;
+    padding: 16px 36px;
     background: #e94560;
     color: #fff;
     border-radius: 6px;
     text-decoration: none;
-    font-size: clamp(0.9rem, 1.4vw, 1.05rem);
+    font-size: clamp(1rem, 1.6vw, 1.4rem);
     font-weight: 600;
     letter-spacing: 0.04em;
   }
@@ -277,7 +318,7 @@
     background: #1a1a2e;
   }
   .counter {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     color: rgba(255,255,255,0.35);
     letter-spacing: 0.1em;
   }
@@ -291,6 +332,14 @@
     <h1>How to Lose a Grant</h1>
     <p class="subtitle-main">A Field Guide to Getting It Wrong</p>
     <p class="subtitle">A reverse guide to the most common mistakes that send proposals straight to the rejection pile, and what to do instead.</p>
+  </div>
+
+  <div class="slide slide-intro">
+    <div class="intro-kicker">Your Presenter</div>
+    <h2 class="intro-name">Ron Kirsop</h2>
+    <div class="intro-accent"></div>
+    <p class="intro-role">Executive Director, OWWL Library System</p>
+    <p class="intro-body">Executive Director of OWWL Library System, a librarian, and a Project Management Professional (PMP). I've spent years supporting libraries across New York on funding strategy, governance, and organizational development. I've seen what gets proposals funded, and what sends them straight to the rejection pile.</p>
   </div>
 
   <div class="slide slide-mistake">
@@ -491,6 +540,38 @@
     <p class="pro-body">One page. Lead with the ask, name the program, connect it to the funder's stated priorities, and close with a specific next step. Reviewers often read the cover letter before they read anything else. Make it count.</p>
   </div>
 
+  <div class="slide slide-pro">
+    <div class="pro-number">09</div>
+    <div class="pro-accent"></div>
+    <div class="pro-label">Often Overlooked</div>
+    <h2>Grant writing is project management with a deadline and a donor.</h2>
+    <p class="pro-body">Most proposals fail not because the idea is bad but because the execution plan is vague. A strong proposal reads like a project plan: clear scope, defined roles, realistic timeline, and named deliverables. If you have ever managed a project, you already know how to think like a funder.</p>
+  </div>
+
+  <div class="slide slide-pro">
+    <div class="pro-number">10</div>
+    <div class="pro-accent"></div>
+    <div class="pro-label">Often Overlooked</div>
+    <h2>Sustainability is not a section. It's a thread.</h2>
+    <p class="pro-body">Most applicants bolt on a sustainability paragraph at the end because the RFP requires it. Strong proposals weave sustainability thinking throughout: how the work continues, who owns it after the grant ends, and what evidence you have that the community will support it long term. Funders are not interested in funding the same project twice.</p>
+  </div>
+
+  <div class="slide slide-pro">
+    <div class="pro-number">11</div>
+    <div class="pro-accent"></div>
+    <div class="pro-label">Often Overlooked</div>
+    <h2>Your strongest competitor is your own past proposal.</h2>
+    <p class="pro-body">If you've been funded before, the funder's expectations just went up. Returning applicants are held to a higher standard: Did you deliver? Did you report? Did outcomes match what you promised? The relationship you built on the first grant is either your biggest asset or your biggest liability going into the next one.</p>
+  </div>
+
+  <div class="slide slide-pro">
+    <div class="pro-number">12</div>
+    <div class="pro-accent"></div>
+    <div class="pro-label">Often Overlooked</div>
+    <h2>Write the thank-you letter before you submit.</h2>
+    <p class="pro-body">Imagining what you will say when you win forces clarity. If you can't write a compelling one-paragraph description of what this grant made possible, your case statement probably needs more work. It's a fast diagnostic that catches vague proposals before they leave your desk.</p>
+  </div>
+
   <div class="slide slide-close">
     <h2>Now you know exactly how to lose a grant.</h2>
     <p>Which means you also know what it takes to write one worth funding. The full guide lives at Project Librarian. Free, practical, and built for people doing this work for real.</p>
@@ -503,7 +584,7 @@
   <div class="progress-fill" id="progress" style="width: 3.7%"></div>
 </div>
 <div class="counter-bar">
-  <span class="counter" id="counter">1 / 27</span>
+  <span class="counter" id="counter">3% complete</span>
 </div>
 
 <script>
@@ -514,7 +595,7 @@
     slides[cur].classList.remove('active');
     cur = Math.max(0, Math.min(slides.length - 1, cur + dir));
     slides[cur].classList.add('active');
-    document.getElementById('counter').textContent = `${cur + 1} / ${slides.length}`;
+    document.getElementById('counter').textContent = `${Math.round(((cur + 1) / slides.length) * 100)}% complete`;
     document.getElementById('progress').style.width = `${((cur + 1) / slides.length) * 100}%`;
   }
 
