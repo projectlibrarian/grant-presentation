@@ -45,6 +45,18 @@
   }
   .slide.active { display: flex; }
 
+  .tap-prev, .tap-next {
+    position: absolute;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    z-index: 10;
+    cursor: pointer;
+    opacity: 0;
+  }
+  .tap-prev { left: 0; }
+  .tap-next { right: 0; }
+
   .slide-title {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
     color: #fff;
@@ -129,6 +141,73 @@
   }
   .slide-mistake .reversal ul { padding-left: 18px; }
   .slide-mistake .reversal ul li { margin-bottom: 4px; }
+
+  /* Transition slide */
+  .slide-transition {
+    background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+    color: #fff;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .slide-transition .t-eyebrow {
+    font-size: clamp(0.9rem, 1.6vw, 1.1rem);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #2ecc71;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 18px;
+  }
+  .slide-transition h2 {
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    line-height: 1.2;
+    margin-bottom: 24px;
+  }
+  .slide-transition .t-body {
+    font-size: clamp(1rem, 1.8vw, 1.2rem);
+    color: rgba(255,255,255,0.7);
+    font-family: 'Arial', sans-serif;
+    line-height: 1.7;
+    max-width: 700px;
+  }
+
+  /* Pro tip slides */
+  .slide-pro { background: #fff; }
+  .pro-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: #0f3460;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .pro-label {
+    font-size: 0.85rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #0f3460;
+    font-family: 'Arial', sans-serif;
+    margin-bottom: 12px;
+  }
+  .slide-pro h2 {
+    font-size: clamp(1.4rem, 3.5vw, 2.5rem);
+    color: #1a1a2e;
+    line-height: 1.25;
+    margin-bottom: 20px;
+  }
+  .pro-body {
+    font-size: clamp(0.95rem, 1.8vw, 1.2rem);
+    color: #444;
+    line-height: 1.75;
+    font-family: 'Arial', sans-serif;
+    max-width: 860px;
+  }
 
   .slide-close {
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
@@ -347,6 +426,78 @@
     <div class="reversal"><strong>The Flip Side</strong><ul><li>Name who will collect data, what they will collect, and how often</li><li>Connect each outcome to a specific measurement method</li><li>Your evaluation plan shows funders you plan to be accountable</li></ul></div>
   </div>
 
+  <!-- Transition Slide -->
+  <div class="slide slide-transition">
+    <div class="t-eyebrow">Now that we know how to lose one...</div>
+    <h2>Let's talk about how to win.</h2>
+    <p class="t-body">The mistakes are easy to laugh at. The specifics that follow are harder to find. These are the things most grant writing guides skip — and the things reviewers notice most.</p>
+  </div>
+
+  <!-- Pro Tip 1 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 1</div>
+    <h2>The funder's last 10 grants are your best research tool.</h2>
+    <p class="pro-body">Most applicants read the funder's website. Savvy applicants look up what they actually funded on GuideStar, their 990, or their grants database. The difference between what a funder says they care about and what they actually write checks for is often very revealing.</p>
+  </div>
+
+  <!-- Pro Tip 2 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 2</div>
+    <h2>Your needs statement should make the reviewer uncomfortable.</h2>
+    <p class="pro-body">Not manipulative. Specific. If a reviewer finishes your needs statement thinking "well, that's a shame," you haven't done your job. They should feel the urgency of acting now, in this community, with this organization.</p>
+  </div>
+
+  <!-- Pro Tip 3 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 3</div>
+    <h2>The strongest proposals borrow credibility.</h2>
+    <p class="pro-body">Letters from elected officials, citations from peer-reviewed research, endorsements from recognized community institutions. You don't have to be the most credible voice in the room. You just have to surround yourself with people who are.</p>
+  </div>
+
+  <!-- Pro Tip 4 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 4</div>
+    <h2>Name your project.</h2>
+    <p class="pro-body">"The Literacy Initiative" is forgettable. "Reading Ready" is not. A named project signals that you've thought this through, makes the work feel real, and gives the funder something to point to when they talk about their portfolio.</p>
+  </div>
+
+  <!-- Pro Tip 5 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 5</div>
+    <h2>Write the evaluation section like a skeptic will read it.</h2>
+    <p class="pro-body">Assume the reviewer doesn't believe your outcomes are achievable. Your job is to show them the methodology that makes it plausible. Don't ask them to trust you. Show them why they should.</p>
+  </div>
+
+  <!-- Pro Tip 6 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 6</div>
+    <h2>A declined proposal is a first draft of your next submission.</h2>
+    <p class="pro-body">Request reviewer comments every time. Most funders will share them. Applicants who treat rejection as feedback get funded faster than those who treat it as a verdict.</p>
+  </div>
+
+  <!-- Pro Tip 7 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 7</div>
+    <h2>Indirect costs are not optional. They're an argument for sustainability.</h2>
+    <p class="pro-body">Many applicants leave indirect costs out to look lean. Experienced reviewers see that as a red flag. If your organization can't cover its overhead from this grant, the question becomes: where is that money coming from?</p>
+  </div>
+
+  <!-- Pro Tip 8 -->
+  <div class="slide slide-pro">
+    <div class="pro-badge">Pro Tip</div>
+    <div class="pro-label">Often Overlooked No. 8</div>
+    <h2>The cover letter is not a formality.</h2>
+    <p class="pro-body">One page. Lead with the ask, name the program, connect it to the funder's stated priorities, and close with a specific next step. Reviewers often read the cover letter before they read anything else. Make it count.</p>
+  </div>
+
+  <!-- Closing Slide -->
   <div class="slide slide-close">
     <h2>Now you know exactly how to lose a grant.</h2>
     <p>Which means you also know what it takes to write one worth funding. The full guide lives at Project Librarian. Free, practical, and built for people doing this work for real.</p>
@@ -367,6 +518,7 @@
 <script>
   const slides = document.querySelectorAll('.slide');
   let cur = 0;
+
   function move(dir) {
     slides[cur].classList.remove('active');
     cur = Math.max(0, Math.min(slides.length - 1, cur + dir));
@@ -376,6 +528,21 @@
     document.getElementById('counter').textContent = `${cur + 1} / ${slides.length}`;
     document.getElementById('progress').style.width = `${((cur + 1) / slides.length) * 100}%`;
   }
+
+  document.querySelectorAll('.slide').forEach(slide => {
+    const prev = document.createElement('div');
+    prev.className = 'tap-prev';
+    prev.addEventListener('click', () => move(-1));
+    const next = document.createElement('div');
+    next.className = 'tap-next';
+    next.addEventListener('click', () => move(1));
+    slide.appendChild(prev);
+    slide.appendChild(next);
+  });
+
+  document.querySelectorAll('.tap-next').forEach(el => el.addEventListener('click', () => move(1)));
+  document.querySelectorAll('.tap-prev').forEach(el => el.addEventListener('click', () => move(-1)));
+
   document.addEventListener('keydown', e => {
     if (['ArrowRight', 'ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); move(1); }
     if (['ArrowLeft', 'ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); move(-1); }
